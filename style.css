@@ -15,9 +15,10 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 50px repeat(4, 1fr);
-    grid-template-rows: repeat(4, .5fr);
+    grid-template-columns: 50px repeat(3, 1fr);
+    grid-template-rows: repeat(3, .5fr);
     margin-top: 20px;
+    padding: 30px;
     gap: 5px;
 }
 .locations-table ul{
@@ -118,7 +119,7 @@ header {
 
 
 .act-btn{
-    background-color: lightskyblue;
+    background-color: rgb(9, 135, 214);
     border: none;
     color: white;
     cursor: pointer;
@@ -129,9 +130,44 @@ header {
     border: white 1px solid;
 }
 
+header{
+    padding-top: 10px;
+    
+}
 
 .btn-container{
      display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 20px;
+}
+
+
+
+@media (max-width: 400px){
+    .btn-container-header{
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        gap: 5px;
+           
+    }
+    .controls{
+        margin-top: 10px;
+        width: 150px;
+    }
+    main {
+   display: flex;
+   flex-direction: column;
+   padding: 5px;
+    }
+    .locations-table {
+        width: 300px;
+        height: 300px;
+    }
+    .btn-container{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
 }

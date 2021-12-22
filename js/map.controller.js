@@ -15,7 +15,7 @@ window.onGetUserPos = onGetUserPos;
 window.onSaveLocation = onSaveLocation;
 window.onSendSearch = onSendSearch;
 window.onDeleteLoc = onDeleteLoc;
-window.showWeather = showWeather;
+window.getWeather = getWeather;
 window.onUpdateLoc = onUpdateLoc;
 
 function onInit() {
@@ -81,7 +81,8 @@ function onGetUserPos() {
 function onPanTo(lat, lng) {
     console.log('Panning the Map');
     mapService.panTo(lat, lng);
-    showWeather(lat, lng)
+    // showWeather(lat, lng)
+    getWeather(lat, lng)
 
 }
 
@@ -110,3 +111,18 @@ document.querySelector('#pac-input').addEventListener('keypress', function (e) {
         document.querySelector('.controls').value = ''
     }
 })
+
+
+function getWeather(lat, lng) {
+    const WETH_API = '8bc7630ddf68a35c9313c636ce4993ac'
+    return axios.get(`http://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lng}&appid=${WETH_API}`)
+        .then(res => {
+            console.log(res.data);
+            renderWeather(res.data.main.temp)
+        })
+}
+
+function renderWeather(weather){
+    document.querySelector('.weather-forc .heading').innerText = ' '+ weather + ' Celsius' 
+}
+

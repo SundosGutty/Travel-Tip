@@ -43,6 +43,8 @@ function saveLocation(loc) {
   locs.push(infoToSave);
   storageService.save(LOC_KEY, locs);
   controller.renderLocs();
+  return infoToSave
+
 }
 
 function deleteLoc(id) {

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>TravelTip</title>
 </head>
+
 <body>
     <header>
-        <h1 class="logo">Sprint 5 : Maps-Me</h1>
-        <div>
+        <h1 class="logo">TravelTip</h1>
+        <div class="btn-container-header">
             <input id="pac-input" class="controls" type="search" placeholder="Search here..."
                 oninput="onSendSearch(value)">
-            <input class="btn input-btn" type="submit" value="Hit me!">
+            <!-- <input class="btn input-btn" type="submit" value="Hit me!"> -->
 
             <button class="btn" onclick="onGetUserPos()">My Location</button>
         </div>
@@ -25,9 +27,12 @@
     </section>
 
     <main class="proj-container main-layout">
+        <!-- <section class="weather-forc">
+            <h3 class="heading">The weather today:</h3>
+        </section> -->
 
         <section class="locations-table">
-            <h3><span class="heading" >Locations:</span> <span class="locs"></span></h3>
+            <h3><span class="heading">Locations:</span> <span class="locs"></span></h3>
             <div class="my-saved-locations"></div>
         </section>
 
@@ -45,7 +50,8 @@
 
 </body>
 
-<script  src="./lib/axios.js"></script>
+<script src="./lib/axios.js"></script>
 <script type="module" src="./js/map.controller.js"></script>
 <script src="./js/main.js"></script>
+
 </html>
