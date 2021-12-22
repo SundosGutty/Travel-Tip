@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Sprint 5 : Maps-Me</h1>
+        <div>
+            <input id="pac-input" class="controls" type="search" placeholder="Search here..."
+                oninput="onSendSearch(value)">
+            <input class="btn input-btn" type="submit" value="Hit me!">
+
+            <button class="btn" onclick="onGetUserPos()">My Location</button>
+        </div>
+    </header>
+
+    <section class="info-section">
+        <h3><span class="heading">You are at: </span><span class="user-pos"></span></h3>
+        <button class="btn">Copy Location</button>
+    </section>
+
+    <main class="proj-container main-layout">
+
+        <section class="locations-table">
+            <h3><span class="heading" >Locations:</span> <span class="locs"></span></h3>
+            <div class="my-saved-locations"></div>
+        </section>
+
+        <section class="map">
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+</body>
+
+<script  src="./lib/axios.js"></script>
+<script type="module" src="./js/map.controller.js"></script>
+<script src="./js/main.js"></script>
+</html>
